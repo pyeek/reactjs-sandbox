@@ -1,0 +1,34 @@
+<!-- index.html -->
+<html>
+  <head>
+    <title>Hello React</title>
+    <script src="https://fb.me/react-0.13.0.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.0.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/jsx">
+
+    // Your code here
+    {% raw %} 
+    var ProductRow = React.createClass({
+        render: function() {
+            var name = this.props.product.stocked ?
+                this.props.product.name :
+                <span style={{color: 'red'}}>
+                    {this.props.product.name}
+                </span>;
+            return (
+                <tr>
+                    <td>{name}</td>
+                    <td>{this.props.product.price}</td>
+                </tr>
+            )
+        }
+    });
+
+    {% endraw%}
+    </script>
+  </body>
+</html>
