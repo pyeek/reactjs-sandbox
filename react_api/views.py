@@ -22,7 +22,12 @@ def comments(request):
 
 @view_config(route_name='comments_api', renderer='json')
 def comments_api(request):
-    return {}
+    return {
+        'data': [
+            {'author': 'Pete Hunt', 'text': 'This is one comment'},
+            {'author': 'Jordan Walke', 'text': 'This is *another* comment'}
+            ]
+        }
 
 @view_config(route_name='product_api', renderer='json')
 def products_api(request):
