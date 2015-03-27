@@ -24,8 +24,8 @@ def comments(request):
 def comments_api(request):
     return {
         'data': [
-            {'author': 'Pete Hunt', 'text': 'This is one comment'},
-            {'author': 'Jordan Walke', 'text': 'This is *another* comment'}
+            {'key': 1, 'author': 'Pete Hunt', 'text': 'This is one comment'},
+            {'key': 2, 'author': 'Jordan Walke', 'text': 'This is *another* comment'}
             ]
         }
 
